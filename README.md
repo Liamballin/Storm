@@ -14,6 +14,8 @@ This promotes the idea of separating yourself from your thoughts – a technique
 Users can release their stressors by typing key words or phrases into a tablet and the word appears on the window with a flash of thunder and lightning. Writing out and articulating these worries can have a very positive effect and allows you to see these thoughts as they really are (Pennebaker, Evans, 2014). As the rain hits the window the word or phrase is washed away, a hopefully cathartic experience, as the word is entered publicly and is a declaration of a stressor. Words and phrases that other people have entered fade in and out briefly; echoes of worries that other people have given to the storm.
 ![Image1](https://raw.githubusercontent.com/Liamballin/Storm/master/images/tumblr_inline_oyymfv5K8G1ugm1z1_540.jpg)
 
+
+
 We chose to use to familiar concept of looking out a window so that people would innately understand that beyond the rain there was a larger hypothetical area.
 The elements of the installation create a combination of meanings and metaphors. The storm is your thoughts – looking out of a city building window on a stormy night, with a window to see in. The connotation of this is that the person is separate from their mental state and the negative thoughts. They are safe and cosy inside even while the storm rages on outside.
 By showing only the rain on the window (which automatically presents the view as a location), with darkness behind and only quick flashes showing more of the environment, and not giving the viewer a complete environment invites them to fill in the details, further personalising the experience to an individual. 
