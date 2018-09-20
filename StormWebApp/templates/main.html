@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>STORM</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+
+	<style type="text/css">
+		body{
+			font-family: 'Amatic SC', cursive;
+			/*background-color: DarkSlateGray ;*/
+	        background-color: black;
+				color: white;
+		}
+
+		#headline{
+			font-size: 200px;
+			margin-top: 10px;
+			text-align: center;	
+
+		}
+		#inputStuff{
+			margin: auto;
+		}
+		#textBox{
+			margin: auto;
+			width: 50%;
+			/*margin-left: 255px;*/
+			margin-left: 25%;
+			margin-bottom: 50px;
+			font-size: 30px;
+		}
+		#textButton{
+			margin: auto;
+			font-size: 50px;
+			/*font-weight: bol/*d*/
+			width: 50%;
+			display: block;
+			background-color: black;
+			border: 2px solid white;
+			color: white;
+
+		}
+
+		.temp123{
+  			text-align:center;
+  			padding:50px;
+		}
+		
+		.temp123 > input{
+ 			 text-align:left;
+		}
+
+
+	</style>
+
+	<script type="text/javascript">
+
+		function loaded(){
+			document.getElementById("textBox").addEventListener('keypress', function(e){
+				var key = e.which || e.keyCode;
+				if(key === 13){
+					sendText();
+				}
+			})
+
+		}
+
+		function sendText(){
+			console.log("button press")
+			var t = getTextBox()
+			console.log(t)
+			ajaxReq(t)
+			// post('/submit', {word:t});
+		}
+
+		function getTextBox(){
+			var box = document.getElementById('textBox')
+			var text = box.value
+			box.value = ""
+			return text
+
+		}
+
+		function ajaxReq(con){
+			console.log("sending string "+con)
+			var xhhtp = new XMLHttpRequest();
+			var params = "word="+con;
+			// xhhtp.onreadystatechange = function(){
+			// 	console.log("State: "+this.readyState);
+
+			// 	if(this.readyState == 4 && this.status == 200){
+			// 		// post = JSON.parse(this.responseText)
+			// 		// updatePage();
+			// 		console.log(this.repsonseText)
+			// 		// post = JSON.parse(this.repsonseText);
+			// 	}
+			// }
+
+
+//			xhhtp.open("GET", "/submit/"+encodeURIComponent(con), true);
+			xhhtp.open("GET", "/submit/"+con, true);
+			
+			// xhhtp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			// xhhtp.setRequestHeader("Content-length", params.length);
+			// xhhtp.setRequestHeader("Connection", "close");
+
+
+			xhhtp.send();
+		}
+
+
+	
+	</script>
+
+</head>
+<body onload = "loaded()">
+	<h1 id='headline'> Storm </h1>
+	<h1 id='subTitle'>  </h1> 
+	<div id='inputStuff'>
+	<input type="text" name="textInput" id='textBox' class='.temp123' placeholder="What's stressing you out?">
+	<input type ='button' value ='Enter' id = 'textButton' onclick="sendText()" name="" class='btn btn-default'>
+	</div>
+</body>
+</html>

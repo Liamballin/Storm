@@ -1,0 +1,89 @@
+<html>
+<head>
+	<title>Manage Words</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<style type="text/css">
+		
+		.wordBox{
+			border: 1px solid black;
+			display: block;
+			/*padding: 20px;*/
+			margin:20px;
+
+			}
+
+	</style>
+
+	<script type="text/javascript">
+		
+		var wordList = [];
+		var wordsLoaded = false;
+
+		function removeWord(n){
+			console.log("removing "+n)
+						// console.log("Getting list")
+			var xhhtp = new XMLHttpRequest();
+			xhhtp.onreadystatechange = function(){
+				// console.log("State: "+this.readyState);
+				if(this.readyState == 4 && this.status == 200){
+					console.log(this.responseText)
+					location.reload()
+				}
+			}
+			xhhtp.open("GET", "/removeWord/"+n.toString(), true)
+			xhhtp.send();
+
+		}
+
+		function loaded(){
+			getWordList();
+			console.log(wordList)
+		}
+
+				function renderList(){
+			console.log("Rendering list..")
+
+			for(i = 0; i < wordList.length; i++){
+
+				var box = document.createElement("div")
+				box.className = "btn btn-primary"
+				// box.onclick = "removeWord(5);"
+				box.id = i;
+				box.addEventListener("click", function(){removeWord(this.id)});
+				
+				var wordText = document.createElement("H1")
+				wordText.innerHTML = wordList[i]
+				box.appendChild(wordText);
+				document.getElementById("wordContainter").appendChild(box);
+
+			}
+		}
+
+		function getWordList(){
+			console.log("Getting list")
+			var xhhtp = new XMLHttpRequest();
+			xhhtp.onreadystatechange = function(){
+				// console.log("State: "+this.readyState);
+				if(this.readyState == 4 && this.status == 200){
+
+					// console.log(JSON.parse(this.responseText))
+					wordList = JSON.parse(this.responseText)
+					console.log(wordList)
+					renderList();
+
+				}
+			}
+			xhhtp.open("GET", "/getList", true)
+			xhhtp.send();
+		}
+
+
+
+	</script>
+</head>
+<body onload="loaded()">
+	<div id="wordContainter"></div>
+
+
+</body>
+</html>

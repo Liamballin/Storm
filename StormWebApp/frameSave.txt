@@ -1,0 +1,1 @@
+{"fps":41.1149,+"words":0,+"rainDrops":632,+"thunderClips":0}
