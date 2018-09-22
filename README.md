@@ -1,5 +1,7 @@
 # Storm
 
+Won best year one project 2017
+
  >*“Defining yourself through thoughts is limiting yourself.”*   - Ekhart Tolle
 
 Our key idea is to allow the participant to experience stepping into their own mind – they are their ‘observing self’, looking out into a representation of their internal mental and physiological state:  visualised by the storm outside, whose intensity is determined by the participant’s heartrate.
