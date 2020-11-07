@@ -6,15 +6,15 @@ Won best year one project 2017
 
 Our key idea is to allow the participant to experience stepping into their own mind – they are their ‘observing self’, looking out into a representation of their internal mental and physiological state:  visualised by the storm outside, whose intensity is determined by the participant’s heartrate.
 
-![Image2](https://raw.githubusercontent.com/Liamballin/Storm/master/images/tumblr_inline_oyymgq0t1u1ugm1z1_540.jpg)
+![Image2](/images/tumblr_inline_oyymgq0t1u1ugm1z1_540.jpg)
 
 
 This promotes the idea of separating yourself from your thoughts – a technique at the core of meditation and mindfulness, and one that is used to help people with anxiety disorders (“Separate Yourself from Your Anxiety”, no date; “5 Steps to Reduce Worrying and Anxiety,” no date).
 
-![System diagram](https://raw.githubusercontent.com/Liamballin/Storm/master/digram.png)
+![System diagram](digram.png)
 
 Users can release their stressors by typing key words or phrases into a tablet and the word appears on the window with a flash of thunder and lightning. Writing out and articulating these worries can have a very positive effect and allows you to see these thoughts as they really are (Pennebaker, Evans, 2014). As the rain hits the window the word or phrase is washed away, a hopefully cathartic experience, as the word is entered publicly and is a declaration of a stressor. Words and phrases that other people have entered fade in and out briefly; echoes of worries that other people have given to the storm.
-![Image1](https://raw.githubusercontent.com/Liamballin/Storm/master/images/tumblr_inline_oyymfv5K8G1ugm1z1_540.jpg)
+![Image1](images/tumblr_inline_oyymfv5K8G1ugm1z1_540.jpg)
 
 
 
